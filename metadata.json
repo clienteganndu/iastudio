@@ -1,0 +1,7 @@
+{
+  "name": "Ai Ganndu Studio",
+  "description": "A professional AI image generation and editing application using Google's Gemini API to bring your creative ideas to life. Describe your vision, select a mode, and generate stunning visuals.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
