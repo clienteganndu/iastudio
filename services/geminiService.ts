@@ -1,11 +1,11 @@
 import { GoogleGenAI, Modality, GenerateContentResponse } from "@google/genai";
 import { CreateFunction, EditFunction, ImageFile } from '../types';
 
-if (!process.env.API_KEY) {
-    throw new Error("API_KEY environment variable not set");
+if (!import.meta.env.VITE_GOOGLE_API_KEY) {
+    throw new Error("VITE_GOOGLE_API_KEY environment variable not set");
 }
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GOOGLE_API_KEY });
 
 const applyPromptEnhancement = (prompt: string, func: CreateFunction): string => {
     switch (func) {
